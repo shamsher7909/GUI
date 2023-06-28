@@ -45,8 +45,8 @@ window = tk.Tk()
 window.title("GUI for gepModelqu")
 
 # Add a text label at the top
-header_label = tk.Label(window, text="Reference: Prediction of grouted soil nail pullout bond strength using gene expression programming by Myoung-Soo Won, Shamsher Sadiq , Sung-Uk Seo and Jun-Yong Park")
-header_label.pack(padx=10, pady=10)
+#header_label = tk.Label(window, text="Reference: Prediction of grouted soil nail pullout bond strength using gene expression programming by Myoung-Soo Won, Shamsher Sadiq , Sung-Uk Seo and Jun-Yong Park")
+#header_label.pack(padx=10, pady=10)
 
 # Create input labels and entry fields
 #input_labels = ['Length (m)', 'Drill hole diameter (m)', 'Angle of inclination (degree)', 'Overburden stress (kPa)', 'Cohesion (kPa)', 'Friction Angle (degree)']
