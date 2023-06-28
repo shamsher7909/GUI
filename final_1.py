@@ -50,7 +50,7 @@ header_label.pack(padx=10, pady=10)
 
 # Create input labels and entry fields
 #input_labels = ['Length (m)', 'Drill hole diameter (m)', 'Angle of inclination (degree)', 'Overburden stress (kPa)', 'Cohesion (kPa)', 'Friction Angle (degree)']
-input_labels = ['Length (m) (3-27)', 'Drill hole diameter (m) (0.1, 0.12 & 0.15)', 'Angle of inclination (degree) (5-45)', 'Overburden stress (kPa) (35-560)', 'Cohesion (kPa) (0-15)', 'Friction Angle (degree) (31-45)']
+input_labels = ['Length (m) (3 to 27)', 'Drill hole diameter (m) (0.1, 0.12 and 0.15)', 'Angle of inclination (degree) (5 to 45)', 'Overburden stress (kPa) (35 to 560)', 'Cohesion (kPa) (0 to 15)', 'Friction Angle (degree) (31to 45)']
 input_entries = []
 
 for i, label in enumerate(input_labels):
