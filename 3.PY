@@ -60,4 +60,16 @@ entries = []
 
 for i, label_text in enumerate(labels):
     label = tk.Label(window, text=label_text)
-    label.grid(row=i, column=0, padx=10, pady
+    label.grid(row=i, column=0, padx=10, pady=5)
+
+    entry = tk.Entry(window)
+    entry.grid(row=i, column=1, padx=10, pady=5)
+
+    entries.append(entry)
+
+# Create the "Calculate" button
+button_calculate = tk.Button(window, text="Calculate", command=calculate)
+button_calculate.grid(row=len(labels), column=0, columnspan=2, padx=10, pady=10)
+
+# Start the GUI main loop
+window.mainloop()
