@@ -73,15 +73,11 @@ photo = ImageTk.PhotoImage(image)
 
 # Create a Label widget to display the image
 label = tk.Label(window)
+label.photo = photo  # Save a reference to the image
 label.config(image=photo)  # Set the image to the label
-label.image = photo  # Save a reference to the image
 
 # Place the label in the window
 label.pack()
-
-# Start the GUI main loop
-window.mainloop()
-
 
 # Start the GUI main loop
 window.mainloop()
