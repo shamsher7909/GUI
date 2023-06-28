@@ -61,6 +61,9 @@ calculate_button.grid(row=len(input_labels), column=0, columnspan=2, padx=10, pa
 result_label = tk.Label(window, text="Result: ")
 result_label.grid(row=len(input_labels)+1, column=0, columnspan=2, padx=10, pady=10)
 
+# Create the Tkinter window
+window = tk.Tk()
+
 # Load the image
 image = Image.open(r"C:\Users\Peter\Downloads\image.png")
 # Resize the image if needed
@@ -68,14 +71,17 @@ image = image.resize((200, 200))
 # Create a PhotoImage object from the image
 photo = ImageTk.PhotoImage(image)
 
-# Create the Label widget to display the image
-label = tk.Label(window, image=photo)
-
-# Set the label's image
-label.image = photo
+# Create a Label widget to display the image
+label = tk.Label(window)
+label.config(image=photo)  # Set the image to the label
+label.image = photo  # Save a reference to the image
 
 # Place the label in the window
-label.grid(row=len(input_labels)+2, column=0, columnspan=2, padx=10, pady=10)
+label.pack()
+
+# Start the GUI main loop
+window.mainloop()
+
 
 # Start the GUI main loop
 window.mainloop()
