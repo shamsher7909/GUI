@@ -70,7 +70,7 @@ from PIL import ImageTk, Image
 window = Tk()
 
 # Load the image
-image = Image.open("C:\Users\Peter\Pictures\Saved Pictures\.png")
+image = Image.open("C:\\Users\\Peter\\Pictures\\Saved Pictures\\image.png")
 # Resize the image if needed
 image = image.resize((200, 200))
 # Create a PhotoImage object from the image
