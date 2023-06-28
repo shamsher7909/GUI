@@ -1,6 +1,30 @@
 import tkinter as tk
 from tkinter import messagebox
 
+# Create the GUI window
+window = tk.Tk()
+window.title("GEP Model GUI")
+
+# Create labels and entry fields for each variable
+labels = ["L", "DD", "i", "sigma_v", "c", "phi"]
+entries = []
+
+for i, label_text in enumerate(labels):
+    label = tk.Label(window, text=label_text)
+    label.grid(row=i, column=0, padx=10, pady=5, sticky="e")
+
+    entry = tk.Entry(window)
+    entry.grid(row=i, column=1, padx=10, pady=5)
+    entries.append(entry)
+
+# Assign entry fields to variable names
+entry_L = entries[0]
+entry_DD = entries[1]
+entry_i = entries[2]
+entry_sigma_v = entries[3]
+entry_c = entries[4]
+entry_phi = entries[5]
+
 def calculate():
     try:
         # Retrieve the input values from the entry fields
@@ -37,33 +61,9 @@ def calculate():
     except ValueError:
         messagebox.showerror("Error", "Invalid input. Please enter valid numbers.")
 
-# Create the GUI window
-window = tk.Tk()
-window.title("GEP Model GUI")
-
-# Create labels and entry fields for each variable
-labels = ["L", "DD", "i", "sigma_v", "c", "phi"]
-entries = []
-
-for i, label_text in enumerate(labels):
-    label = tk.Label(window, text=label_text)
-    label.grid(row=i, column=0, padx=10, pady=5, sticky="e")
-
-    entry = tk.Entry(window)
-    entry.grid(row=i, column=1, padx=10, pady=5)
-    entries.append(entry)
-
 # Create the "Calculate" button
 button_calculate = tk.Button(window, text="Calculate", command=calculate)
 button_calculate.grid(row=len(labels), column=0, columnspan=2, padx=10, pady=10)
-
-# Assign entry fields to variable names
-entry_L = entries[0]
-entry_DD = entries[1]
-entry_i = entries[2]
-entry_sigma_v = entries[3]
-entry_c = entries[4]
-entry_phi = entries[5]
 
 # Start the GUI main loop
 window.mainloop()
