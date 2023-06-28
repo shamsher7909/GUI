@@ -57,5 +57,13 @@ for i, label_text in enumerate(labels):
 button_calculate = tk.Button(window, text="Calculate", command=calculate)
 button_calculate.grid(row=len(labels), column=0, columnspan=2, padx=10, pady=10)
 
+# Assign entry fields to variable names
+entry_L = entries[0]
+entry_DD = entries[1]
+entry_i = entries[2]
+entry_sigma_v = entries[3]
+entry_c = entries[4]
+entry_phi = entries[5]
+
 # Start the GUI main loop
 window.mainloop()
