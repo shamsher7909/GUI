@@ -27,6 +27,10 @@ model.fit(X, y, epochs=100, batch_size=32)  # Adjust the number of epochs and ba
 # Make predictions
 predictions = model.predict(X)
 
-# Print the predictions with variable names
-for i, prediction in enumerate(predictions):
-    print("Prediction for variables", ', '.join(variable_names), ":", prediction)
+# Create a DataFrame with predictions, actual response, and variable names
+prediction_df = pd.DataFrame(predictions, columns=['Prediction'])
+prediction_df['Response'] = y
+prediction_df['Variables'] = data.iloc[:, :-1].values
+
+# Save predictions to Excel file
+prediction_df.to_excel('predictions.xlsx', index=False)
