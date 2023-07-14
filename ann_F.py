@@ -4,6 +4,11 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense
 
+
+from sklearn.metrics import mean_squared_error, mean_absolute_error
+from scipy.stats import pearsonr
+
+
 # Load the CSV file
 data = pd.read_csv('training.csv')
 
@@ -51,6 +56,21 @@ plt.show()
 
 # Print the DataFrame
 print(prediction_df)
+
+
+# Calculate RMSE
+rmse = np.sqrt(mean_squared_error(prediction_df['Response'], prediction_df['Prediction']))
+
+# Calculate MAE
+mae = mean_absolute_error(prediction_df['Response'], prediction_df['Prediction'])
+
+# Calculate correlation coefficient R
+r, _ = pearsonr(prediction_df['Response'], prediction_df['Prediction'])
+
+# Print metrics
+print('Root Mean Squared Error (RMSE):', rmse)
+print('Mean Absolute Error (MAE):', mae)
+print('Correlation Coefficient R:', r)
 
 
 
