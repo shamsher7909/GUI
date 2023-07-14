@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense
@@ -31,15 +32,22 @@ predictions = model.predict(X)
 prediction_df = pd.DataFrame({'Response': y, 'Prediction': predictions.flatten()})
 prediction_df[variable_names] = data.iloc[:, :-1]
 
-# Save predictions to Excel file
-#prediction_df.to_excel('predictions.xlsx', index=False)
-#prediction_df.to_json('predictions.json', orient='records')
 
-#prediction_df.to_csv('predictions.csv', index=False)
 
-# Set display options
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_columns', None)
+# Plotting the prediction and response values
+plt.plot(prediction_df['Prediction'], label='Prediction')
+plt.plot(prediction_df['Response'], label='Response')
+
+# Add labels and title
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.title('Prediction vs Response')
+
+# Add legend
+plt.legend()
+
+# Display the plot
+plt.show()
 
 # Print the DataFrame
 print(prediction_df)
