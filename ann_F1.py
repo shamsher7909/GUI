@@ -72,8 +72,6 @@ print('Root Mean Squared Error (RMSE):', rmse)
 print('Mean Absolute Error (MAE):', mae)
 print('Correlation Coefficient R:', r)
 
-# Assuming you have trained your ANN model and obtained the history object
-# Access the loss values from the history object
 loss = history.history['loss']
 
 # Get the number of epochs
@@ -86,6 +84,13 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
 plt.show()
+Please replace the placeholder comments with your actual code and make sure to have the matplotlib library installed in your Python environment. If you encounter any further issues, please let me know.
+
+
+
+
+
+
 
 
 
