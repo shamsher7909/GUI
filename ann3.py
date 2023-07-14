@@ -32,4 +32,6 @@ prediction_df = pd.DataFrame({'Response': y, 'Prediction': predictions.flatten()
 prediction_df[variable_names] = data.iloc[:, :-1]
 
 # Save predictions to Excel file
-prediction_df.to_excel('predictions.xlsx', index=False)
+#prediction_df.to_excel('predictions.xlsx', index=False)
+prediction_df.to_csv('predictions.csv', index=False)
+
