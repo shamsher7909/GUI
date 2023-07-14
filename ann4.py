@@ -33,5 +33,7 @@ prediction_df[variable_names] = data.iloc[:, :-1]
 
 # Save predictions to Excel file
 #prediction_df.to_excel('predictions.xlsx', index=False)
+prediction_df.to_json('predictions.json', orient='records')
+
 prediction_df.to_csv('predictions.csv', index=False)
 
