@@ -86,11 +86,7 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
 plt.show()
-In the above code, the loss variable stores the training loss values from the history object. The epochs variable represents the number of epochs. Then, using Matplotlib, the epochs are plotted on the x-axis and the corresponding loss values on the y-axis.
 
-You can customize the plot by adding a title, x-axis and y-axis labels, and a legend. Finally, the plt.show() function is used to display the plot.
-
-Note: Make sure you have the matplotlib library installed in your Python environment. If not, you can install it using the command pip install matplotlib.
 
 
 
